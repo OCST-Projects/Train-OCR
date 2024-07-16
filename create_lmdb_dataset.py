@@ -35,7 +35,7 @@ def createDataset(inputPath, gtFile, outputPath, checkValid=True):
         checkValid : if true, check the validity of every image
     """
     os.makedirs(outputPath, exist_ok=True)
-    env = lmdb.open(outputPath, map_size=1073741824)
+    env = lmdb.open(outputPath, map_size=10995116277)
     cache = {}
     cnt = 1
 

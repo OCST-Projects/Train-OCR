@@ -346,7 +346,7 @@ def get_flops(model, opt, converter):
 
 
 if __name__ == '__main__':
-    opt = get_args(is_train=False)
+    opt = get_args()
 
     """ vocab / character number configuration """
     if opt.sensitive:

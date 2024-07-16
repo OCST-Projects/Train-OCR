@@ -118,7 +118,8 @@ def hierarchical_dataset(root, opt, select_data='/'):
     dataset_log = f'dataset_root:    {root}\t dataset: {select_data[0]}'
     print(dataset_log)
     dataset_log += '\n'
-    for dirpath, dirnames, filenames in os.walk(root+'/'):
+    a = os.walk(root)
+    for dirpath, dirnames, filenames in os.walk(root):
         if not dirnames:
             select_flag = False
             for selected_d in select_data:

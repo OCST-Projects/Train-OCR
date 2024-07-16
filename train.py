@@ -266,17 +266,12 @@ if __name__ == '__main__':
 
     opt = get_args()
 
-    if not opt.exp_name:
-        opt.exp_name = f'{opt.TransformerModel}' if opt.Transformer else f'{opt.Transformation}-{opt.FeatureExtraction}-{opt.SequenceModeling}-{opt.Prediction}'
-
-    opt.exp_name += f'-Seed{opt.manualSeed}'
 
     os.makedirs(f'./saved_models/{opt.exp_name}', exist_ok=True)
 
     """ vocab / character number configuration """
     if opt.sensitive:
         opt.character = string.printable[:-6]  # same with ASTER setting (use 94 char).
-
 
         
     """ Seed and GPU setting """
